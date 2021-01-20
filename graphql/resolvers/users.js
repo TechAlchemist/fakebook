@@ -9,7 +9,8 @@ function generateToken(user) {
     return jwt.sign({
         id: user.id,
         email: user.email,
-        username: user.username
+        username: user.username,
+        profilePicture: user.profilePicture
     }, process.env.SECRET, { expiresIn: '24h' });
 }
 
@@ -54,7 +55,7 @@ module.exports = {
                 username,
                 email,
                 password,
-                confirmPassword
+                confirmPassword,
             );
 
             if  (!valid) {
@@ -74,11 +75,13 @@ module.exports = {
             // hash password and create an auth token 
             password = await bcrypt.hash(password, 12);
 
+            // Mongoose Model
             const newUser = new User({
                 email,
                 username,
                 password,
-                createdAt: new Date().toISOString()
+                createdAt: new Date().toISOString(),
+                profilePicture: "https://via.placeholder.com/150"
             });
 
             const res = await newUser.save();

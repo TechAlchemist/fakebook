@@ -10,6 +10,7 @@ module.exports = gql`
     likes: [Like]!
     likeCount: Int!
     commentCount: Int!
+    profilePicture: String!
   }
   type Comment {
     id: ID!
@@ -28,6 +29,7 @@ module.exports = gql`
     token: String!
     username: String!
     createdAt: String!
+    profilePicture: String!
   }
   input RegisterInput {
     username: String!
