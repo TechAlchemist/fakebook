@@ -11,7 +11,7 @@ Technologies Used
 - GraphQL
 - Semantic UI React
 
-Fakebook is a social media app created to learn and implement GraphQL in a fullstack application.
+Fakebook is a social media app created to learn and implement GraphQL in a fullstack application. The application is built of off Apollo. Apollo helps on the front and backend for working with graphql.
 
 ## Features to add.
 
@@ -26,6 +26,5 @@ Fakebook is a social media app created to learn and implement GraphQL in a fulls
 
 ## Deploy the Project
 
----
 
 [Deploy Application](https://fakebook-ql.herokuapp.com/)
